@@ -1,28 +1,28 @@
 import React from "react";
 import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
 
+import {MaterialCommunityIcons, MaterialIcons} from "@expo/vector-icons"
+import AppText from "../components/AppText";
+import styled from "styled-components";
+import { VStack } from "native-base";
+
 function WelcomeScreen(props) {
   return (
-    <ImageBackground
-      style={styles.background}
+    <Background
       source={require("../assets/background.jpg")}
     >
-      <View style={styles.logoContainer}>
+      <LogoContainer flex={1} >
         <Image style={styles.logo} source={require("../assets/logo-red.png")} />
         <Text>Sell What You Don't Need</Text>
-      </View>
+      </LogoContainer>
+
       <View style={styles.loginButton}></View>
       <View style={styles.registerButton}></View>
-    </ImageBackground>
+    </Background>
   );
 }
 
 const styles = StyleSheet.create({
-  background: {
-    flex: 1,
-    justifyContent: "flex-end",
-    alignItems: "center",
-  },
   loginButton: {
     width: "100%",
     height: 70,
@@ -42,6 +42,17 @@ const styles = StyleSheet.create({
     height: 70,
     backgroundColor: "#4ecdc4",
   },
+});
+
+const Background = styled(ImageBackground)({
+  flex: 1,
+  justifyContent: "flex-end",
+  alignItems: "center",
+});
+
+const LogoContainer = styled(VStack)({
+    top: 70,
+    alignItems: "center",
 });
 
 export default WelcomeScreen;
