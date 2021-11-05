@@ -5,6 +5,7 @@ import {MaterialCommunityIcons, MaterialIcons} from "@expo/vector-icons"
 import AppText from "../components/AppText";
 import styled from "styled-components";
 import { VStack } from "native-base";
+import AppButton from "../components/AppButton";
 
 function WelcomeScreen(props) {
   return (
@@ -13,11 +14,13 @@ function WelcomeScreen(props) {
     >
       <LogoContainer flex={1} >
         <Image style={styles.logo} source={require("../assets/logo-red.png")} />
-        <Text>Sell What You Don't Need</Text>
+        <Text>Selenaston V1.1</Text>
       </LogoContainer>
 
-      <View style={styles.loginButton}></View>
-      <View style={styles.registerButton}></View>
+      {/* <View style={styles.loginButton}></View>
+      <View style={styles.registerButton}></View> */}
+      <AppButton style={styles.loginButton} title="Login"></AppButton>
+      <AppButton style={styles.registerButton} title="Register"></AppButton>
     </Background>
   );
 }
