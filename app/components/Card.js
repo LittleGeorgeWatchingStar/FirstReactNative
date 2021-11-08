@@ -3,6 +3,7 @@ import { View, StyleSheet, Image } from "react-native";
 
 import AppText from "./AppText";
 import colors from "../config/colors";
+import ListItem from "./ListItem";
 
 function Card({ title, subTitle, image }) {
   return (
@@ -11,6 +12,9 @@ function Card({ title, subTitle, image }) {
       <View style={styles.detailsContainer}>
         <AppText style={styles.title}>{title}</AppText>
         <AppText style={styles.subTitle}>{subTitle}</AppText>
+        <View style={styles.userContainer}>
+          <ListItem  title="My 1st user: Josh" subTitle="2 items" image={require("../assets/mosh.jpg")}></ListItem>
+        </View>
       </View>
     </View>
   );
@@ -36,6 +40,11 @@ const styles = StyleSheet.create({
   },
   title: {
     marginBottom: 7,
+    fontSize: 24,
+    fontWeight: "500",
+  },
+  userContainer: {
+    paddingTop: 15
   },
 });
 
