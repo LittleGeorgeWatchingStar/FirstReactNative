@@ -10,6 +10,7 @@ import MessagesScreen from "./app/screens/MessagesScreen";
 import Screen from "./app/components/Screen";
 import AppPicker from "./app/components/AppPicker";
 import AppTextInput from "./app/components/AppTextInput";
+import LoginScreen from "./app/screens/LoginScreen";
 
 const categories = [
   { label: "Furniture", value: 1 },
@@ -25,7 +26,7 @@ export default function App() {
       {/* <ListingDetailsScreen /> */}
       {/* <ListingsScreen /> */}
       {/* <AccountScreen /> */}
-      <Screen>
+      {/* <Screen>
         <AppPicker
           selectedItem={category}
           onSelectItem={(item) => setCategory(item)}
@@ -34,7 +35,8 @@ export default function App() {
           placeholder="Category"
         />
         <AppTextInput icon="email" placeholder="Email" />
-      </Screen>
+      </Screen> */}
+      <LoginScreen />
     </NativeBaseProvider>
   );
 }

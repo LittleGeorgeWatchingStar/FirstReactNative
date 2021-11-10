@@ -2,6 +2,8 @@ import React from "react";
 import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
 import AppButton from "../components/AppButton";
 
+import colors from "../config/colors";
+
 function WelcomeScreen(props) {
   return (
     <ImageBackground
@@ -11,7 +13,7 @@ function WelcomeScreen(props) {
     >
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/logo-red.png")} />
-        <Text style={styles.tagline} color="secondary">Selenaston V1.1</Text>
+        <Text style={styles.tagline}>Selenaston V1.1</Text>
       </View>
       <View style={styles.buttonsContainer}>
         <AppButton title="Login" />
@@ -44,6 +46,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: "600",
     paddingVertical: 20,
+    color:colors.secondary,
   },
 });
 
